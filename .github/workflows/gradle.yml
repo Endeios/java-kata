@@ -29,4 +29,5 @@ jobs:
     - name: Publishes dist zip artifact
       uses: actions/upload-artifact@v2
       with:
+        name: java-kata.zip
         path: /home/runner/work/java-kata/java-kata/build/distributions/java-kata.zip
