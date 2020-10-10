@@ -1,15 +1,10 @@
 package kata;
 
-import org.junit.platform.engine.TestSource;
 import org.junit.platform.launcher.Launcher;
 import org.junit.platform.launcher.LauncherDiscoveryRequest;
-import org.junit.platform.launcher.TestIdentifier;
-import org.junit.platform.launcher.TestPlan;
-
 import static org.junit.platform.engine.discovery.DiscoverySelectors.*;
 import static org.junit.platform.engine.discovery.ClassNameFilter.*;
 
-import java.io.PrintWriter;
 import java.util.List;
 
 import org.junit.platform.launcher.core.LauncherDiscoveryRequestBuilder;
@@ -21,11 +16,10 @@ import org.junit.platform.launcher.listeners.TestExecutionSummary.Failure;
 public class TestLauncher {
     SummaryGeneratingListener listener = new SummaryGeneratingListener();
 
-    public void runOne(Class cut) {
+    public void runOne(Class<?> cut) {
         LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request().selectors(selectClass(cut))
                 .build();
         Launcher launcher = LauncherFactory.create();
-        TestPlan testPlan = launcher.discover(request);
         launcher.registerTestExecutionListeners(listener);
         launcher.execute(request);
     }
@@ -34,7 +28,6 @@ public class TestLauncher {
         LauncherDiscoveryRequest request = LauncherDiscoveryRequestBuilder.request().selectors(selectPackage("kata"))
                 .filters(includeClassNamePatterns(".*Test")).build();
         Launcher launcher = LauncherFactory.create();
-        TestPlan testPlan = launcher.discover(request);
         launcher.registerTestExecutionListeners(listener);
         launcher.execute(request);
     }
@@ -44,7 +37,6 @@ public class TestLauncher {
         // runner.runOne(AppTest.class);
         runner.runAll();
         TestExecutionSummary summary = runner.listener.getSummary();
-        //summary.printTo(new PrintWriter(System.out));
         printSuccesses(summary);
         printFailuresIfThereAreAny(summary);
     }
@@ -55,10 +47,14 @@ public class TestLauncher {
     }
 
     private static void printFailuresIfThereAreAny(TestExecutionSummary summary) {
-        List<Failure> fails = summary.getFailures();
         if (summary.getTestsFailedCount() > 0) {
             System.out.printf("There are \033[31m%d ❌\033[0m test failures\n", summary.getTestsFailedCount());
-            summary.printFailuresTo(new PrintWriter(System.out));
+            //summary.printFailuresTo(new PrintWriter(System.out));
+            List<Failure> fails = summary.getFailures();
+            for (Failure failure : fails) {
+                System.out.printf("🚨 %s \n", failure.getException().getMessage());
+                
+            }
         }
     }
 }
