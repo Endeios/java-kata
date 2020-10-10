@@ -49,7 +49,6 @@ public class TestLauncher {
     private static void printFailuresIfThereAreAny(TestExecutionSummary summary) {
         if (summary.getTestsFailedCount() > 0) {
             System.out.printf("There are \033[31m%d ❌\033[0m test failures\n", summary.getTestsFailedCount());
-            //summary.printFailuresTo(new PrintWriter(System.out));
             List<Failure> fails = summary.getFailures();
             for (Failure failure : fails) {
                 System.out.printf("🚨 %s \n", failure.getException().getMessage());
