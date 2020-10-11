@@ -291,13 +291,95 @@ It is my turn to navigate right? The test was failing...
 
 BR: Yes.... master....
 
-LU: You scare me... So now we could just return the number in that function there, wee are just doing the first two numbers right? 
----
+LU: You scare me... So now we could just return the number in that function there, we are just doing the first two numbers right? We are inducing the bahviour
 
-Lib
+BR: Your ideas are always so bright master...
+
+LU: Snap out of it! And write the code!
+
+BR: Sure, but the spec is clear that we want a ```String``` there, not a number, because "fizz" and "buzz" and "fizzbuzz" need to be representable, so I will write like this
+
+```java
+...
+    public String fizBuzzOf(int number) {
+		return String.format("%d", number);
+	}
+...
+```
+
+... aaaand test ...
 
 💻 ```computer``` 
 
 ```shell
-There are 1 ✔️ over 1 Tests Passing
+There are 3 ✔️  over 3 Tests Passing
 ```
+
+Marvellous!
+
+LU: Right, so next one should be ```fizz_buzz_of_three_shluld_be_fizz```! Please copy and paste the previous test and change the string and the number accordingly!
+
+
+BR: Right away!
+
+```java
+...
+    @Test void fizzBuzz_of_three_should_be_fizz(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.fizBuzzOf(3);
+        assertEquals("fizz", result);
+    }
+...
+```
+... And run ...
+
+💻 ```computer``` 
+
+```shell
+There are 3 ✔️  over 4 Tests Passing
+There are 1 ❌ test failures
+🚨 expected: <fizz> but was: <3>
+```
+
+## Step 5: Lucie :car: drives, Bruno :pencil: navigates
+
+LU: So I'll drive, what now?
+
+BR: the easiest way to tackle this is to check if the input is equal to three and, if yes, return ```"fizz"```
+
+LU: Like this
+
+```java
+...
+	public String fizBuzzOf(int number) {
+        if (number==3)
+            return "fizz";
+		return String.format("%d", number);
+	}
+...
+```
+BR: Yup, and yes, it could be a bit better, but for now it will do.
+
+LU: ... let's run! ...
+
+💻 ```computer``` 
+
+```shell
+There are 4 ✔️  over 4 Tests Passing
+```
+
+... Nice, so what next?
+
+And they continued, till the end of the kata
+
+
+
+---
+
+Important snippets to keep in mind to finish the kata
+
+|Snippet|meaning|
+|-------|-------|
+|```if(number%3==0)```| it is a condition that is true when the number is perfectly divisible by three, in other words _when the interger rest of the division by three is zero_|
+|```if(number%5==0)```| same condition as above, just with the number five. Do not be afraid of copy pasting in this kata (or others for that matter)|
+|```if(number%15==0)```| same condition as above, just with the number fifteen. Do not be afraid of copy pasting in this kata (or others for that matter)|
