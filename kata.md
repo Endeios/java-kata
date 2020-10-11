@@ -82,7 +82,7 @@ BR: Yes, we want to be sure that we start from somethinf that works, otherwise w
 
 LU: Tak jo
 
-:computer: 1/1 Tests Passing :heavy_check_mark:
+:computer: There are 1 ✔️ over 1 Tests Passing
 
 BR: VIVA! so the pop corn or ping pong pair test driven development is like the following: one is the driver, who will drive our rally car, which is the computer: you will be the first to drive. I will be your rally navigator, telling you wich direction to take
 
@@ -109,4 +109,60 @@ LU: but the test will fail, the ide is complaining that there is no ```FizzBuzze
 
 BR: that is correct, our first test is failing because is not compiling.
 
-:computer: 🚨 Unresolved compilation problems: FizzBuzz cannot be resolved to a type
+:computer: 
+```shell
+There are 1 ✔️ over 2 Tests Passing 
+There are 1 ❌ test failures
+🚨 Unresolved compilation problems:
+        FizzBuzz cannot be resolved to a type
+```
+
+LU: so it is: and now?
+
+## Step 2: Lucie :pencil: navigates, Bruno :car: drives
+
+BR: Now we switch, I navigated the first test, and you typed, so now we invert roles: you will tell me how to fix the test, and think of the next one: *we basically switch at any failing test* 
+
+LU: Right, but I am not a programmer, I do not know what to do.
+
+BR: I am the driver, but I can still counsel you: the driver / navigator thing is for code not to go for one person head's to the program, without being said out loud. Our ide suggests us to create a class: we could do just that!
+
+LU: sure, it's one click, let's do it!
+
+```java
+... // in a file called FizzBuzz.java
+package kata;
+
+public class FizzBuzz {
+
+}
+```
+
+BR: and what do we do just after we wrote *just the bit of production code to pass the test* ?
+
+LU: we run the tests?
+
+BR: precisely!
+
+:computer: 
+```shell
+There are 2 ✔️ over 2 Tests Passing
+```
+
+LU: and now? switch?
+
+BR: we switch wen the test fail, no fail no switch! Now is timme to think about the next test.
+
+LU: I do not like the thing of the two tests: it confuses me, we did only one tests, there should be only one test.
+
+BR: right, shall I delete the first sample test? we don't really need it anymore...
+
+LU: yes delete it, I can't stand it.
+
+BR: right away! (removes first test)
+
+:computer: 
+```shell
+There are 1 ✔️ over 1 Tests Passing
+```
+LU: good, so how do we think of the next test?
