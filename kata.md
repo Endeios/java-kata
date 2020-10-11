@@ -61,15 +61,24 @@ LU: "I like the sound of it, but testing is something you do after an app is don
 
 BR: "Yeah, that name... when the inventor, Ken Beck, gave it a name, he just had invented the unit tests for java, as a programming tool, so that it's customers could have automated test; it is a long story: the short version is, the first thing that he used to try to emulate a classic programming definition, was this xUnit test framework, and it became test driven development. But it is not about testing, it is about decomposing the problem"
 
-LU: "Nope, it is not clear, say it better"
+LU: Nope, it is not clear, say it better"
 
 BR: "You know that programming is basically problem solving right? You are given requirements, that are basically problems you have to solve"
 
 LU: "Yup"
 
-BR: "So you take a problem, you slice it very fine, take one of the bite sized little problems, and solve that one insted. It is called Test driven, because you first do a test in which you state how a program should output given the input, for example if the input is 3 the output should be fizz, and then write the easiest program that gives that output given the input."
+BR: So you take a problem, you slice it very fine, take one of the bite sized little problems, and solve that one first. It is called Test driven, because you first do a test in which you state how a program should output given the input, for example if the input is 3 the output should be fizz, and then write the easiest program that gives that output given the input. This gives life to *_THE RYTHM_* of development, this potentially infinite steps of advancement toward the objectinve of the application:
+### The Rythm
+- A little bit of Test code ❌
+- A little bit of production code ✔️ 
+- A little bit of test code ❌
+- A little bit of production code ✔️
+.... 
 
-LU: "Still a bit abstract..."
+The rythm and _induction_ will bring us to the app.
+
+
+LU: Still a bit abstract...
 
 BR: "Yup, sorry for that, it is easier if I show you... let's take those remote pairing machines, and have a try.
 
@@ -173,4 +182,114 @@ BR: right away! (removes first test)
 ```shell
 There are 1 ✔️ over 1 Tests Passing
 ```
-LU: good, so how do we think of the next test?
+LU: good, so what do we do next? how do we do the next test?
+
+BR: the next brick in our wall comes from the spec: what is the very first case?
+
+LU: well, the first number does not change.
+
+BR: and how do we express that in terms of input output? That Ken Beck guy, started all this thing with books about input and output tapes.
+
+LU: then input one, and output one
+
+BR: we need something a bit more _intentional_, when we are going to read this again need to read like prose
+
+LU: *uff*, so let's say ```fizzBuzz_of_one_should_be_one```, what about that
+
+BR: that is perfect! expresses the intention of the test, and if would red it in the test execution report and read
+
+```shell
+fizzBuzz_of_one_should_be_one test is failing
+```
+
+I would perfectly understand what is wrong! Let me write that as second test
+
+```java
+...
+    @Test void fizzBuzz_of_one_should_be_one(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.fizBuzzOf(1);
+        assertEquals("1", result);
+    }
+...
+```
+....aaaand run tests
+
+💻 ```computer``` 
+
+```shell
+There are 1 ✔️  over 2 Tests Passing
+There are 1 ❌ test failures
+🚨 Unresolved compilation problem:
+        The method fizBuzzOf(int) is undefined for the type FizzBuzz
+```
+LU: fail, so we switch
+
+BR: yup, it is my turn again to navigate and yours to drive. please write a method in the ```FizzBuzz``` class called ```fizzBuzzOf``` with an integer parameter called ```number```, and with an output value that is a ```String```: make the method return the string ```"1"```.
+
+LU: a static string as result? can't we just use the input?
+
+BR: we could, but this is simpler and there is nothing simpler than a static string. The production code should be as simple as possible.
+
+LU: whatever floats your boat....
+
+```java
+...
+	public String fizBuzzOf(int number) {
+		return "1";
+	}
+...
+```
+... now tests ....
+💻 ```computer``` 
+
+```shell
+There are 2 ✔️ over 2 Tests Passing
+```
+
+BR: AH! tests pass! What a joyful thing!
+
+LU: You are easily amused....
+
+BR: Green test is love! Green test is life! Now, let's copy the first test, rename it to ```fizzBuzz_of_two_should_be_two```, and change the ones to twos, both input and expected result
+
+LU: Like this?
+```java
+...
+    @Test void fizzBuzz_of_one_should_be_one(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String result = fizzBuzz.fizBuzzOf(1);
+        assertEquals("1", result);
+    }
+...
+```
+
+BR: exactly! now run the tests, they should fail, because the returned string is wrong
+
+💻 ```computer``` 
+
+```shell
+There are 2 ✔️  over 3 Tests Passing
+There are 1 ❌ test failures
+🚨 expected: <2> but was: <1>
+```
+
+LU: I am not surprised! to be honest this static string seems a bit silly to me...
+
+BR: I assure you it is not! That was a fast way of having this test fail, and in doing so, concentrating on the rythm of the "switch" and "test code"-"production code", which is our objective here, not the program. The program is boring, we are using it's boringness to concentrate on the rythm, that is our objective. Do not look at the shape: concentrate on the space between the shapes.
+
+LU: ...right the rythm, we started with the rythm...
+It is my turn to navigate right? The test was failing...
+
+BR: Yes.... master....
+
+LU: You scare me... So now we could just return the number in that function there, wee are just doing the first two numbers right? 
+---
+
+Lib
+
+💻 ```computer``` 
+
+```shell
+There are 1 ✔️ over 1 Tests Passing
+```
