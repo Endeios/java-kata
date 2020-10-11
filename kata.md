@@ -10,11 +10,11 @@ They meet over the Zoom.
 
 Bruno: "Yo Lucie, what about a kata?"
 
-LU: "A What?"
+Lucie: "A What?"
 
-Br: "A Kata is a programming exercise, we use it to learn programming techniques"
+BR: "A Kata is a programming exercise, we use it to learn programming techniques"
 
-Lu: "Sure, we can try, But I am not a great programmer, can we do it?"
+LU: "Sure, we can try, But I am not a great programmer, can we do it?"
 
 BR: "Absolutely! One could actually learn programming, by doing, with just katas: we just need to start from the beginning: We will use the super technique of Pair Programming"
 
