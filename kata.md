@@ -225,6 +225,9 @@ There are 1 ❌ test failures
 ```
 LU: fail, so we switch
 
+
+## Step 3: Lucie :car: drives, Bruno :pencil: navigates
+
 BR: yup, it is my turn again to navigate and yours to drive. please write a method in the ```FizzBuzz``` class called ```fizzBuzzOf``` with an integer parameter called ```number```, and with an output value that is a ```String```: make the method return the string ```"1"```.
 
 LU: a static string as result? can't we just use the input?
@@ -274,9 +277,14 @@ There are 1 ❌ test failures
 🚨 expected: <2> but was: <1>
 ```
 
+## Important intermezzo 
+
 LU: I am not surprised! to be honest this static string seems a bit silly to me...
 
 BR: I assure you it is not! That was a fast way of having this test fail, and in doing so, concentrating on the rythm of the "switch" and "test code"-"production code", which is our objective here, not the program. The program is boring, we are using it's boringness to concentrate on the rythm, that is our objective. Do not look at the shape: concentrate on the space between the shapes.
+
+
+## Step 4: Lucie :pencil: navigates, Bruno :car: drives
 
 LU: ...right the rythm, we started with the rythm...
 It is my turn to navigate right? The test was failing...
