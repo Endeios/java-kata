@@ -11,4 +11,10 @@ class AppTest {
         App classUnderTest = new App();
         assertNotNull(classUnderTest.getGreeting(), "app should have a greeting");
     }
+    
+    @Test void fizzBuzzer_should_exist(){
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        assertNotNull(fizzBuzz);
+    }
+
 }

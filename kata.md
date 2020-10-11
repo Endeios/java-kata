@@ -29,7 +29,8 @@ BR: "One of the easiest is FizzBuzz, we can do that as a starter. This will also
 LU: Stop right there: what did you say this FuzzBuzz? FezzBizz?
 
 
-BR: Fizz buzz is a child's game, in which you count up to 100 
+BR: Fizz buzz is a child's game, in which you count up to 100, and you say fizz instead of multiples of 3 and buzz instead of the multiples of five: also you say FizzBuzz on the multiples of both, like in this list 
+
 ```
 1
 2
@@ -82,7 +83,11 @@ BR: Yes, we want to be sure that we start from somethinf that works, otherwise w
 
 LU: Tak jo
 
-:computer: There are 1 ✔️ over 1 Tests Passing
+💻 ```computer``` 
+
+```shell
+There are 1 ✔️ over 1 Tests Passing
+```
 
 BR: VIVA! so the pop corn or ping pong pair test driven development is like the following: one is the driver, who will drive our rally car, which is the computer: you will be the first to drive. I will be your rally navigator, telling you wich direction to take
 
@@ -109,7 +114,8 @@ LU: but the test will fail, the ide is complaining that there is no ```FizzBuzze
 
 BR: that is correct, our first test is failing because is not compiling.
 
-:computer: 
+💻 ```computer``` 
+
 ```shell
 There are 1 ✔️ over 2 Tests Passing 
 There are 1 ❌ test failures
@@ -144,7 +150,8 @@ LU: we run the tests?
 
 BR: precisely!
 
-:computer: 
+💻 ```computer``` 
+
 ```shell
 There are 2 ✔️ over 2 Tests Passing
 ```
@@ -161,7 +168,8 @@ LU: yes delete it, I can't stand it.
 
 BR: right away! (removes first test)
 
-:computer: 
+💻 ```computer``` 
+
 ```shell
 There are 1 ✔️ over 1 Tests Passing
 ```
