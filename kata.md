@@ -16,7 +16,7 @@ BR: "A Kata is a programming exercise, we use it to learn programming techniques
 
 LU: "Sure, we can try, But I am not a great programmer, can we do it?"
 
-BR: "Absolutely! One could actually learn programming, by doing, with just katas: we just need to start from the beginning: We will use the super technique of Pair Programming"
+BR: "Absolutely! One could actually learn programming, by doing, with just katas: we just need to start from the beginning: We will use the superior technique of Pair Programming"
 
 LU: "Another programmer's thing..."
 
@@ -67,7 +67,8 @@ BR: "You know that programming is basically problem solving right? You are given
 
 LU: "Yup"
 
-BR: So you take a problem, you slice it very fine, take one of the bite sized little problems, and solve that one first. It is called Test driven, because you first do a test in which you state how a program should output given the input, for example if the input is 3 the output should be fizz, and then write the easiest program that gives that output given the input. This gives life to *_THE RYTHM_* of development, this potentially infinite steps of advancement toward the objectinve of the application:
+BR: So you take a problem, you slice it very fine, take one of the bite sized little problems, and solve that one first. It is called Test driven, because you first do a test in which you state how a program should output given the input, for example if the input is 3 the output should be fizz, and then write the easiest program that gives that output given the input. This gives life to *_THE RYTHM_* of development, this potentially infinite loop of steps of advancement toward the objectinve of the application:
+
 ### The Rythm
 - A little bit of Test code ❌
 - A little bit of production code ✔️ 
@@ -88,7 +89,7 @@ BR: "So open the test class file, and run it, so that we know that our env is co
 
 LU: "Just run, like this, with just the sample code inside"
 
-BR: Yes, we want to be sure that we start from somethinf that works, otherwise we cannot tell why test fail, if the do not execute, right?"
+BR: Yes, we want to be sure that we start from something that works, otherwise we cannot tell why test fail, if they do not execute, right?"
 
 LU: Tak jo
 
@@ -98,7 +99,7 @@ LU: Tak jo
 There are 1 ✔️ over 1 Tests Passing
 ```
 
-BR: VIVA! so the pop corn or ping pong pair test driven development is like the following: one is the driver, who will drive our rally car, which is the computer: you will be the first to drive. I will be your rally navigator, telling you wich direction to take
+BR: VIVA! so the _pop corn_ or _ping pong_ pair *test driven development* is like the following: one is the driver, who will drive our rally car, which is the computer: you will be the first to drive. I will be your rally navigator, telling you wich direction to take
 
 LU: like in : you tell me what to write?
 
@@ -132,7 +133,7 @@ There are 1 ❌ test failures
         FizzBuzz cannot be resolved to a type
 ```
 
-LU: so it is: and now?
+LU: so it is... and now?
 
 ## Step 2: Lucie :pencil: navigates, Bruno :car: drives
 
@@ -140,7 +141,7 @@ BR: Now we switch, I navigated the first test, and you typed, so now we invert r
 
 LU: Right, but I am not a programmer, I do not know what to do.
 
-BR: I am the driver, but I can still counsel you: the driver / navigator thing is for code not to go for one person head's to the program, without being said out loud. Our ide suggests us to create a class: we could do just that!
+BR: I am the driver, but I can still counsel you: the driver / navigator thing is for _the code not to go for one person head's to the program, without being said out loud_. Our ide suggests us to create a class: we could do just that!
 
 LU: sure, it's one click, let's do it!
 
@@ -167,7 +168,7 @@ There are 2 ✔️ over 2 Tests Passing
 
 LU: and now? switch?
 
-BR: we switch wen the test fail, no fail no switch! Now is timme to think about the next test.
+BR: we switch when the test fail; no fail no switch! Now is time to think about the next test.
 
 LU: I do not like the thing of the two tests: it confuses me, we did only one tests, there should be only one test.
 
@@ -188,15 +189,15 @@ BR: the next brick in our wall comes from the spec: what is the very first case?
 
 LU: well, the first number does not change.
 
-BR: and how do we express that in terms of input output? That Ken Beck guy, started all this thing with books about input and output tapes.
+BR: and how do we express that in terms of input output? That Ken Beck guy, started all this thing from books about input and output tapes.
 
 LU: then input one, and output one
 
-BR: we need something a bit more _intentional_, when we are going to read this again need to read like prose
+BR: we need something a bit more _intentional_; when we are going to read this again, it needs to read like prose
 
 LU: *uff*, so let's say ```fizzBuzz_of_one_should_be_one```, what about that
 
-BR: that is perfect! expresses the intention of the test, and if would red it in the test execution report and read
+BR: that is perfect! expresses the intention of the test, and if would read it in the test execution report and read
 
 ```shell
 fizzBuzz_of_one_should_be_one test is failing
@@ -232,7 +233,7 @@ BR: yup, it is my turn again to navigate and yours to drive. please write a meth
 
 LU: a static string as result? can't we just use the input?
 
-BR: we could, but this is simpler and there is nothing simpler than a static string. The production code should be as simple as possible.
+BR: we could, but this is simpler and there is nothing simpler than a static string. The production code should be as simple as possible, as hackish as possible.
 
 LU: whatever floats your boat....
 
@@ -259,10 +260,10 @@ BR: Green test is love! Green test is life! Now, let's copy the first test, rena
 LU: Like this?
 ```java
 ...
-    @Test void fizzBuzz_of_one_should_be_one(){
+    @Test void fizzBuzz_of_two_should_be_two(){
         FizzBuzz fizzBuzz = new FizzBuzz();
-        String result = fizzBuzz.fizBuzzOf(1);
-        assertEquals("1", result);
+        String result = fizzBuzz.fizBuzzOf(2);
+        assertEquals("2", result);
     }
 ...
 ```
@@ -281,7 +282,7 @@ There are 1 ❌ test failures
 
 LU: I am not surprised! to be honest this static string seems a bit silly to me...
 
-BR: I assure you it is not! That was a fast way of having this test fail, and in doing so, concentrating on the rythm of the "switch" and "test code"-"production code", which is our objective here, not the program. The program is boring, we are using it's boringness to concentrate on the rythm, that is our objective. Do not look at the shape: concentrate on the space between the shapes.
+BR: I assure you it is not! That was a fast way of having this next test fail, and in doing so, concentrating on the _rythm_ of the "switch" and "test code"-"production code", which is our objective here; we are not here for the program. The program is boring, we are using its boringness to concentrate on the rythm, which is our true objective today. Do not look at the shape: concentrate on the space between the shapes.
 
 
 ## Step 4: Lucie :pencil: navigates, Bruno :car: drives
@@ -291,7 +292,7 @@ It is my turn to navigate right? The test was failing...
 
 BR: Yes.... master....
 
-LU: You scare me... So now we could just return the number in that function there, we are just doing the first two numbers right? We are inducing the bahviour
+LU: You scare me... So now we could just return the number in that function there, we are just doing the first two numbers right? We are inducing the bahviour.
 
 BR: Your ideas are always so bright master...
 
@@ -369,6 +370,8 @@ There are 4 ✔️  over 4 Tests Passing
 ```
 
 ... Nice, so what next?
+
+
 
 And they continued, till the end of the kata
 
